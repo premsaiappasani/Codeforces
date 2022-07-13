@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define mod 1000000007
+#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)
+int main()
+{
+    fast;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int k;
+        cin >> k;
+        vector<int> v;
+        int n = 1;
+        while (v.size() < k)
+        {
+            if (n % 3 != 0)
+            {
+                if (n % 10 != 3)
+                {
+                    v.push_back(n);
+                }
+            }
+            n++;
+        }
+        cout << v[k - 1] << endl;
+    }
+    return 0;
+}
